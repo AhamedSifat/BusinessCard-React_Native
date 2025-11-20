@@ -1,8 +1,19 @@
 import { StatusBar } from 'expo-status-bar';
-import { Image, StyleSheet, Text, View, ScrollView } from 'react-native';
+import {
+  Image,
+  StyleSheet,
+  Text,
+  View,
+  ScrollView,
+  Button,
+} from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 
 export default function App() {
+  const onContactMe = () => {
+    console.warn('Contact me clicked');
+  };
+
   return (
     <ScrollView>
       <View style={styles.container}>
@@ -40,6 +51,8 @@ export default function App() {
           <AntDesign name='twitter' size={24} color='black' />
           <AntDesign name='facebook' size={24} color='black' />
         </View>
+
+        <Button title='Contact Me' onPress={onContactMe} />
 
         <Text style={{ padding: 10, fontSize: 20, lineHeight: 20 }}>
           Life often feels like a long, winding road filled with unexpected

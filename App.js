@@ -16,6 +16,12 @@ export default function App() {
     console.warn('Contact me clicked');
   };
 
+  const links = {
+    github: 'https://github.com/shahriarahamed',
+    twitter: 'https://twitter.com/shahriarahamed',
+    facebook: 'https://facebook.com/shahriarahamed',
+  };
+
   const getOcupation = () => {
     return 'Software Engineer';
   };
@@ -23,9 +29,11 @@ export default function App() {
   const renderSocialIcon = () => {
     return (
       <View style={{ flexDirection: 'row', marginVertical: 10, gap: 10 }}>
-        <AntDesign name='github' size={24} color='black' />
-        <AntDesign name='twitter' size={24} color='black' />
-        <AntDesign name='facebook' size={24} color='black' />
+        {links.github && <AntDesign name='github' size={24} color='black' />}
+        {links.twitter && <AntDesign name='twitter' size={24} color='black' />}
+        {links.facebook && (
+          <AntDesign name='facebook' size={24} color='black' />
+        )}
       </View>
     );
   };

@@ -11,8 +11,23 @@ import AntDesign from '@expo/vector-icons/AntDesign';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
 
 export default function App() {
+  const name = 'Shahriar Ahamed';
   const onContactMe = () => {
     console.warn('Contact me clicked');
+  };
+
+  const getOcupation = () => {
+    return 'Software Engineer';
+  };
+
+  const renderSocialIcon = () => {
+    return (
+      <View style={{ flexDirection: 'row', marginVertical: 10, gap: 10 }}>
+        <AntDesign name='github' size={24} color='black' />
+        <AntDesign name='twitter' size={24} color='black' />
+        <AntDesign name='facebook' size={24} color='black' />
+      </View>
+    );
   };
 
   return (
@@ -46,14 +61,10 @@ export default function App() {
                 fontWeight: 'bold',
               }}
             >
-              Shahriar Ahamed
+              {name}
             </Text>
-            <Text>Founder of Sex.com</Text>
-            <View style={{ flexDirection: 'row', marginVertical: 10, gap: 10 }}>
-              <AntDesign name='github' size={24} color='black' />
-              <AntDesign name='twitter' size={24} color='black' />
-              <AntDesign name='facebook' size={24} color='black' />
-            </View>
+            <Text>{getOcupation()}</Text>
+            {renderSocialIcon()}
 
             <Button title='Contact Me' onPress={onContactMe} />
 

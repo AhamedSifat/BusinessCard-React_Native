@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import AntDesign from '@expo/vector-icons/AntDesign';
 import { SafeAreaProvider, SafeAreaView } from 'react-native-safe-area-context';
+import ProjectsCard from './ProjectCard';
 
 export default function App() {
   const name = 'Shahriar Ahamed';
@@ -79,23 +80,33 @@ export default function App() {
             <Text style={{ padding: 10, fontSize: 20, lineHeight: 20 }}>
               Life often feels like a long, winding road filled with unexpected
               turns, small surprises, and moments that stay with us far longer
-              than we expect. Some days move slowly, as if time itself is
-              stretching just to see how patient we can be; other days pass so
-              quickly that we barely get the chance to breathe. In between these
-              moments, we learn more about ourselves—what we want, what we fear,
-              and what we dream about when no one else is watching. People we
-              meet along the way shape us in ways we don’t always notice. A
-              simple conversation, a kind smile, or even a short message at the
-              right time can turn an ordinary moment into something meaningful.
-              We carry these memories like soft lanterns, guiding us when
-              everything feels dark or confusing. And even though life doesn’t
-              always go the way we plan, there is something beautiful in the
-              uncertainty. It teaches us to grow, to adapt, and to hope. Every
-              morning becomes a new chance to understand the world a little
-              better and to understand ourselves a little more deeply. In the
-              end, it’s these small, ordinary moments that create the story we
-              call our life.
             </Text>
+
+            <Text style={{ fontWeight: 'bold', fontSize: 18, marginTop: 20 }}>
+              Projects
+            </Text>
+            <ScrollView
+              horizontal
+              showsHorizontalScrollIndicator={false}
+              contentContainerStyle={{ padding: 10, gap: 10 }}
+            >
+              <ProjectsCard
+                name='Project 1'
+                image={require('./assets/projects/project1.jpg')}
+              />
+              <ProjectsCard
+                name='Project 2'
+                image={require('./assets/projects/project2.jpg')}
+              />
+              <ProjectsCard
+                name='Project 3'
+                image={require('./assets/projects/project3.jpg')}
+              />
+              <ProjectsCard
+                name='Project 4'
+                image={require('./assets/projects/project4.jpg')}
+              />
+            </ScrollView>
 
             <StatusBar style='light' />
           </View>

@@ -92,19 +92,19 @@ export default function App() {
             >
               <ProjectsCard
                 name='Project 1'
-                image={require('./assets/projects/project1.jpg')}
+                image={require('./assets/projects/project1.jpeg')}
               />
               <ProjectsCard
                 name='Project 2'
-                image={require('./assets/projects/project2.jpg')}
+                image={require('./assets/projects/project2.jpeg')}
               />
               <ProjectsCard
                 name='Project 3'
-                image={require('./assets/projects/project3.jpg')}
+                image={require('./assets/projects/project3.jpeg')}
               />
               <ProjectsCard
                 name='Project 4'
-                image={require('./assets/projects/project4.jpg')}
+                image={require('./assets/projects/project4.jpeg')}
               />
             </ScrollView>
 

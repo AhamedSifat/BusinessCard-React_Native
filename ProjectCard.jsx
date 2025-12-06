@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, View, Image, Text } from 'react-native';
 
 const ProjectsCard = ({ name, image }) => {
   return (
